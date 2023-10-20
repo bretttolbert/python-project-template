@@ -1,0 +1,31 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "python_project_template"
+authors = [
+    {name = "Brett Tolbert"},
+]
+description = "A skeleton for a minimal, modern python project"
+readme = "README.md"
+requires-python = ">=3.11"
+keywords = []
+license = {file = "LICENSE.txt"}
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.11",
+    "License :: OSI Approved :: GNU General Public License v3 (GPLv3)"
+]
+dependencies = [
+]
+dynamic = ["version"]
+
+[tool.setuptools.dynamic]
+version = {attr = "python_project_template.VERSION"}
+
+[project.scripts]
+hello = "python_project_template.hello:main"
+
+# ... other project metadata fields as specified in:
+#     https://packaging.python.org/en/latest/specifications/declaring-project-metadata/
